@@ -1,0 +1,116 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.bg-grey {
+    background-color: #494d58;
+}
+.navbar{
+    height:80px;
+}
+.el {
+    margin: 40px;
+    width: 300px;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.border_green {
+    border-color: green white white white; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+}
+.border_red {
+    border-color: red white white white; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+}
+.border_blue {
+    border-color: blue white white white; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+}
+.border_violet {
+    border-color: blueviolet white white white; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+}
+.border_mint {
+    border-color: mediumspringgreen white white white; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+}
+.border_orange {
+    border-color: darkorange white white white; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+}
+.select-wrapper {
+    position: relative;
+}
+    .select-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        display: block;
+        width: 10px;
+        height: 10px;
+        pointer-events: none;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10.4px 6px 0 6px;
+        border-color: #6d7073 transparent transparent transparent;
+        color: red;
+    }
+    .right{
+        width: 600px;
+        height: 300px;
+        
+    }
+.left {
+    width: 600px;
+    height: 300px;
+    background-color: #e8f0fe;
+}
+.textarea_form {
+    width: 600px;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: #e8f0fe;
+    font-size: 16px;
+    outline: none;
+    resize: vertical;
+}
+.classicButton {
+    width: 1250px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 6px !important;
+    background: #0043fa !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+    font-size: 1px !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    margin-bottom: 100px;
+}
+.for_icon_img {
+    width: 13%;
+    margin: 20px;
+}
+a{
+    text-decoration:none;
+    color: black;
+}

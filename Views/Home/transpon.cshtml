@@ -1,0 +1,60 @@
+﻿
+<h1>@ViewData["Title"]</h1>
+<h3 class="text-center">Шифр транспонирования</h3>
+<p>
+    В транспозиционном шифре буквы переставляются по заранее определённому правилу. Например, если каждое слово пишется задом наперед, то из hello world получается dlrow olleh. Другой пример — менять местами каждые две буквы. Таким образом, предыдущее сообщение станет eh ll wo ro dl.
+  </p>
+
+<p> Ещё можно использовать столбчатый шифр транспонирования, в котором каждый символ написан горизонтально с заданной шириной алфавита, а шифр создаётся из символов по вертикали. Пример:</p>
+<div style="text-align: -webkit-center;"><img src="~/img/Точечный рисунок.bmp" /></div><br />
+<p>Из этого способа мы получим шифр holewdlo lr.В криптографии транспозиционный шифр представляет собой метод шифрования, с помощью которого позиции, удерживаемые единицами открытый текст (который обычно представляет собой символы или группы символов) сдвигается в соответствии с обычной системой, так что зашифрованный текст представляет собой перестановку открытого текста. То есть изменяется порядок единиц (переупорядочивается открытый текст). Математически функция bijective используется для позиций символов для шифрования и обратная функция для дешифрования.</p>
+
+
+<br />
+<h6>При онлайн передаче электронных документов (почтовая рассылка, скачивание с сайта и т.д.) в файле может сбиться кодировка. В результате вместо привычных слов, предложений и абзацев вы получаете последовательность непонятных символов. Так случается из-за того, что кодирование и декодирование информации происходит некорректно, и устройства отправителя и получателя просто не понимают друг друга. Чтобы расшифровать зашифрованный текст, обратитесь к нашему онлайн декодеру.</h6>
+
+@using (Html.BeginForm("transpon", "Home", FormMethod.Post))
+    {
+      
+    
+    
+<div>
+    <h3 style="text-align: center; margin-bottom: 30px;">Cryption</h3>
+</div>
+<div style="display: inline-flex;">
+    <div>
+    <div class="left">
+                 <input class="textarea_form" type="text" name="clearText" />
+    </div>
+
+</div>
+    <div style="margin-left: 50px;">
+    <div class="right textarea_form">@TempData["EncryptedText"]</div>
+</div>
+</div>
+<input type="submit" class="decoder_button__1Mui8 classicButton button_abtn__3dZPL" name="submit" value="Encrypt" />
+
+<h3 style="text-align: center; margin-bottom: 30px;">Decryption</h3>
+<div style="display: inline-flex;">
+    <div>
+    <div class="left">
+                 <input class="textarea_form" type="text" name="cipherText"  />
+    </div>
+
+</div>
+    <div style="margin-left: 50px;">
+    <div class="right textarea_form">@TempData["DecryptedText"]</div>
+</div>
+</div>
+<input type="submit" class="decoder_button__1Mui8 classicButton button_abtn__3dZPL" name="submit" value="Decrypt" />
+
+
+}
+@{
+        TempData.Keep("EncryptedText");
+    }
+
+
+<br />
+<br />
+<br />

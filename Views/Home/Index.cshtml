@@ -1,0 +1,41 @@
+﻿
+<h1>@ViewData["Title"]</h1>
+<h3 class="text-center">Шифрование</h3>
+<p>Шифрова́ние — обратимое преобразование информации в целях сокрытия от неавторизованных лиц с предоставлением в это же время авторизованным пользователям доступа к ней. Главным образом шифрование служит задачей соблюдения конфиденциальности передаваемой информации. Важной особенностью любого алгоритма шифрования является использование ключа, который утверждает выбор конкретного преобразования из совокупности возможных для данного алгоритма.</p>
+<div style="text-align: -webkit-center;">
+    <div style="display:inline-flex;">
+        <a asp-action="rot1" asp-controller="Home"><div class="el border_green">
+            <img class="for_icon_img" src="/img/free-icon-displacement-1533952.png" alt="ROT1">
+            <h5 style="display: ">ROT1</h5>
+    </div></a>
+        <a asp-action="cezar" asp-controller="Home">
+            <div class="el border_red">
+            <img style="width:15%;" class="for_icon_img" src="/img/free-icon-money-5199813.png" alt="ROT1">
+            <h5>Шифр Цезаря</h5>
+
+            </div>
+        </a>
+       <a asp-action="transpon" asp-controller="Home"> <div class="el border_blue">
+                <img class="for_icon_img" src="/img/transpon.png" alt="ROT1">
+            <h5>Шифр транспонирования</h5>
+            </div>
+        </a>
+    </div>
+    <a asp-action="morze" asp-controller="Home"><div style="display:inline-flex;">
+        <div class="el border_violet">
+            <img class="for_icon_img" src="/img/free-icon-morse-code-4075435.png" alt="ROT1">
+            <h5>Азбука Морзе</h5>
+            </div>
+    </a>
+       <a asp-action="dvcode" asp-controller="Home"> <div class="el border_mint">
+            <img style="width: 10%; margin: 25px;" class="for_icon_img" src="/img/free-icon-binary-1822943.png" alt="ROT1">
+            <h5>Двоичный код</h5>
+        </div>
+    </a>
+        <a asp-action="vizhener" asp-controller="Home"><div class="el border_orange">
+            <img class="for_icon_img" src="/img/free-icon-abc-block-794562.png" alt="ROT1">
+            <h5>Шифр Виженера</h5>
+        </div>
+    </a>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+﻿
+<h1>@ViewData["Title"]</h1>
+<h3 class="text-center">ROT1</h3>
+<p>
+    Шифр Цезаря ROT1, также известный как шифр сдвига, код Цезаря или сдвиг Цезаря — один из самых простых и наиболее широко известных методов шифрования.
+
+    Шифр Цезаря — это вид шифра подстановки, в котором каждый символ в открытом тексте заменяется символом находящимся на некотором постоянном числе позиций левее или правее него в алфавите. Например, в шифре со сдвигом 3 А была бы заменена на Г, Б станет Д, и так далее.
+
+    Используемое преобразование обычно обозначают как ROTN, где N — сдвиг, ROT — сокращение от слова ROTATE, в данном случае «циклический сдвиг». Число разных преобразований конечно и зависит от длины алфавита. Для русского языка возможно 32 разных преобразования (преобразования ROT0 и ROT33 сохраняют исходный текст, а дальше начинаются уже повторения).<br />
+
+   </p>
+
+    <p style="text-align: -webkit-center">Шифр Цезаря со сдвигом на 1 (английский алфавит):<br /></p>
+<br />
+<div style="text-align:center;">
+    <img src="~/img/cezar.png" />
+</div>
+<br />
+
+   <p> A заменяется на B<br />
+
+    B заменяется на C<br />
+
+    и так далее<br />
+
+    Z заменяется на A<br />
+
+    Шифр назван в честь римского императора Гая Юлия Цезаря, использовавшего его для секретной переписки со своими генералами.</p>
+
+
+
+<br />
+<h6>При онлайн передаче электронных документов (почтовая рассылка, скачивание с сайта и т.д.) в файле может сбиться кодировка. В результате вместо привычных слов, предложений и абзацев вы получаете последовательность непонятных символов. Так случается из-за того, что кодирование и декодирование информации происходит некорректно, и устройства отправителя и получателя просто не понимают друг друга. Чтобы расшифровать зашифрованный текст, обратитесь к нашему онлайн декодеру.</h6>
+
+ @using (Html.BeginForm("rot1", "Home", FormMethod.Post))
+    {
+      
+    
+    
+<div>
+    <h3 style="text-align: center; margin-bottom: 30px;">Cryption</h3>
+</div>
+<div style="display: inline-flex;">
+    <div>
+    <div class="left">
+                 <input class="textarea_form" type="text" name="clearText" />
+    </div>
+
+</div>
+    <div style="margin-left: 50px;">
+    <div class="right textarea_form">@TempData["EncryptedTextCeazar"]</div>
+</div>
+</div>
+<input type="submit" class="decoder_button__1Mui8 classicButton button_abtn__3dZPL" name="submit" value="Encrypt" />
+
+<h3 style="text-align: center; margin-bottom: 30px;">Decryption</h3>
+<div style="display: inline-flex;">
+    <div>
+    <div class="left">
+                 <input class="textarea_form" type="text" name="cipherText"  />
+    </div>
+
+</div>
+    <div style="margin-left: 50px;">
+    <div class="right textarea_form">@TempData["DecryptedTextCeazar"]</div>
+</div>
+</div>
+<input type="submit" class="decoder_button__1Mui8 classicButton button_abtn__3dZPL" name="submit" value="Decrypt" />
+
+
+}
+@{
+        TempData.Keep("EncryptedTextCeazar");
+    }
+
+<br />
+<br />
+<br />
